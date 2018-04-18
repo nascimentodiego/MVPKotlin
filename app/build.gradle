@@ -32,16 +32,30 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.androidConstraintLayoutVersion"
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.androidSupportLibraryVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //Architecture components
+/*    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+    implementation "android.arch.lifecycle:livedata:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+*/
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    // alternatively, just ViewModel
+    // alternatively, just LiveData
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
     //Communication
     implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.converter_gson"
     implementation "com.google.code.gson:gson:$rootProject.ext.gson"
     implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttp"
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttp"
+
     //RxJava - RxAndroid
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava"
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroid"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.adapter_rxjava2"
+
     //Testing
     testImplementation "junit:junit:$rootProject.ext.jUnitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.espressoRunnerVersion"
