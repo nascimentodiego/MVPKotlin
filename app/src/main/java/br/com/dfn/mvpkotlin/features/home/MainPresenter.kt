@@ -19,7 +19,7 @@ class MainPresenter : BasePresenter<MainContract.MainView>() {
             mListOfMovies?.forEach {
                 Log.d("Main", "Film: " + it.title)
             }
-            view?.onLoadFilms(mListOfMovies!!.size)
+            view?.onLoadFilms(mListOfMovies!!)
             return
         }
 
@@ -33,7 +33,7 @@ class MainPresenter : BasePresenter<MainContract.MainView>() {
                                 Log.d("Main", "Film: " + it.title)
                             }
                             mListOfMovies = movies.results
-                            view?.onLoadFilms(mListOfMovies!!.size)
+                            view?.onLoadFilms(mListOfMovies!!)
                         },
                         { t: Throwable -> this.handleError(t) },
                         { Log.d("Main", "OnComplete") })
